@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="SmokeSuite">
+    <test name="Smoke Test">
+        <classes>
+            <class name="JavaTestingMaven">JavaTestingMaven</class>
+        </classes>
+    </test>
+</suite>
