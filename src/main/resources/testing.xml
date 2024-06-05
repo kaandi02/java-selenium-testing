@@ -2,7 +2,7 @@
 <suite name="SmokeSuite">
     <test name="Smoke Test">
         <classes>
-            <class name="javatestingmaven">javatestingmaven</class>
+            <class name="javatesting2">Java Test 2</class>
         </classes>
     </test>
 </suite>

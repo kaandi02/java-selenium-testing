@@ -28,7 +28,17 @@ public class javatestingmaven {
 
     Steps steps = new Steps();
 
-    @Test
+//    javatesting2 jt2 = new javatesting2();
+//
+//    @Test(priority = 2)
+//    public void callanother(){
+//        if(jt2.nthtest()==Status.PASS)
+//            test.log(Status.PASS,"Java Testing 2 Passed");
+//        else
+//            test.log(Status.FAIL,"Java Testing 2 Failed");
+//    }
+
+    @Test(priority = 1)
     public void testWithChrome(){
         wd = new ChromeDriver();
         steps.initDriver(wd);
@@ -44,7 +54,7 @@ public class javatestingmaven {
         }
     }
 
-    @Test
+    @Test(priority = 3)
     public void testWithFirefox(){
         wd = new FirefoxDriver();
         steps.initDriver(wd);
