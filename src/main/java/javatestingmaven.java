@@ -11,10 +11,9 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
-
 import java.io.File;
 
-public class JavaTestingMaven {
+public class javatestingmaven {
     WebDriver wd;
     ExtentReports ext1; // class
     ExtentTest test;//interface
@@ -24,7 +23,7 @@ public class JavaTestingMaven {
         ExtentHtmlReporter testreport = new ExtentHtmlReporter("src//main//java/report.html"); // path
         ext1=new ExtentReports(); // object
         ext1.attachReporter(testreport);
-        test = ext1.createTest("user.dir", "test");
+        test = ext1.createTest("2 Browser Check", "Report on automation testing done on 2 browsers(Chrome and Firefox) in a test suite using TestNG");
     }
 
     Steps steps = new Steps();
@@ -38,6 +37,7 @@ public class JavaTestingMaven {
             File src = ((TakesScreenshot) wd).getScreenshotAs(OutputType.FILE);
             Files.copy(src, new File("src//test//screenshot1.png"));
             test.log(Status.PASS, "Chrome Testing Passed");
+            wd.close();
         }
         catch (Exception e) {
             test.log(Status.ERROR, e+" Chrome Testing Failed");
@@ -53,6 +53,7 @@ public class JavaTestingMaven {
             File src = ((TakesScreenshot) wd).getScreenshotAs(OutputType.FILE);
             Files.copy(src, new File("src//test//screenshot2.png"));
             test.log(Status.PASS, "Firefox Testing Passed");
+            wd.close();
         }
         catch (Exception e) {
             test.log(Status.ERROR, e+" Firefox Testing Failed");
